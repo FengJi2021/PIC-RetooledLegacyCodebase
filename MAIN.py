@@ -5,10 +5,10 @@ Created on 2018/3/29
 @author: Administrator
 '''
 import sys
-from PyQt4 import QtCore, QtGui
-from PyQt4.QtSql import *
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt5 import QtCore, QtGui
+from PyQt5.QtSql import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
     
 import py_mysql
 import qt_mysql
