@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "intelligent-system-for-productionline-"
+version = "0.1.0"
+description = ""
+authors = ["FengJi2021 <feng.ji@campus.tu-berlin.de>"]
+readme = "README.md"
+packages = [{include = "intelligent_system_for_productionline_"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyqt5 = "^5.15.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
