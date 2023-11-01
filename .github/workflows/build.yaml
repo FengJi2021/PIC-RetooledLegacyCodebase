@@ -11,19 +11,19 @@ jobs:
   build-macos:
     runs-on: macos-13
     steps:
-      -name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      -name: Set up python 3.9
+      - name: Set up python 3.9
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      -name: Install dependencies
-        runs: |
+      - name: Install dependencies
+        run: |
           python3.9 -m pip install --upgrade pip
           pip install -r requirements.txt
-      -name: Build
+      - name: Build
         run: ./build.sh
-      -name: Upload macos artifact
+      - name: Upload macos artifact
         uses: actions/upload-artifact@v2
         with:
           name: macos-dist
