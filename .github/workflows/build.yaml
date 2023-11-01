@@ -23,7 +23,9 @@ jobs:
           python3.9 -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build
-        run: ./build.sh
+        run: |
+          chmod +x build.sh
+          ./build.sh
       - name: Upload macos artifact
         uses: actions/upload-artifact@v2
         with:
