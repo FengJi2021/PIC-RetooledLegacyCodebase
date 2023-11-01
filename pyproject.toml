@@ -7,8 +7,9 @@ readme = "README.md"
 packages = [{include = "intelligent_system_for_productionline_"}]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9,<3.13" # pyinstaller exclude >3.13
 pyqt5 = "^5.15.9"
+pyinstaller = "^6.1.0"
 
 
 [build-system]
