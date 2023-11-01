@@ -1,0 +1,30 @@
+name: Build desktop executable
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-macos:
+    runs-on: macos-13
+    steps:
+      -name: Checkout
+        uses: actions/checkout@v2
+      -name: Set up python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      -name: Install dependencies
+        runs: |
+          python3.9 -m pip install --upgrade pip
+          pip install -r requirements.txt
+      -name: Build
+        run: ./build.sh
+      -name: Upload macos artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: macos-dist
+          path: dist/
