@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - enable_ga_for_build
   pull_request:
     branches:
       - main
