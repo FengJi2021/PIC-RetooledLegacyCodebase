@@ -4,12 +4,12 @@ version = "0.1.0"
 description = ""
 authors = ["FengJi2021 <feng.ji@campus.tu-berlin.de>"]
 readme = "README.md"
-packages = [{include = "intelligent_system_for_productionline_"}]
 
 [tool.poetry.dependencies]
-python = "^3.9,<3.13" # pyinstaller exclude >3.13
-pyqt5 = "^5.15.9"
-pyinstaller = "^6.1.0"
+python = "3.9.16" # pyinstaller exclude >3.13
+pyqt5 = "5.15.10"
+pyqt5-qt5 = "5.15.11"
+pyinstaller = "6.1.0"
 
 
 [build-system]
