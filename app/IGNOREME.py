@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -58,11 +64,15 @@ class Ui_MainWindow(object):
         self.act_userpwd = QtGui.QAction(MainWindow)
         self.act_userpwd.setObjectName(_fromUtf8("act_userpwd"))
         self.machinetoolrealtime = QtGui.QAction(MainWindow)
-        self.machinetoolrealtime.setObjectName(_fromUtf8("machinetoolrealtime"))
+        self.machinetoolrealtime.setObjectName(
+            _fromUtf8("machinetoolrealtime")
+        )
         self.productdesign = QtGui.QAction(MainWindow)
         self.productdesign.setObjectName(_fromUtf8("productdesign"))
         self.NeuralnetworkVisual = QtGui.QAction(MainWindow)
-        self.NeuralnetworkVisual.setObjectName(_fromUtf8("NeuralnetworkVisual"))
+        self.NeuralnetworkVisual.setObjectName(
+            _fromUtf8("NeuralnetworkVisual")
+        )
         self.getMTstaticinfo = QtGui.QAction(MainWindow)
         self.getMTstaticinfo.setObjectName(_fromUtf8("getMTstaticinfo"))
         self.updateMTstaticinfo = QtGui.QAction(MainWindow)
@@ -98,9 +108,12 @@ class Ui_MainWindow(object):
         self.productcraft.setText(_translate("MainWindow", "产品工艺信息", None))
         self.act_userinfo.setText(_translate("MainWindow", "用户信息管理", None))
         self.act_userpwd.setText(_translate("MainWindow", "用户密码管理", None))
-        self.machinetoolrealtime.setText(_translate("MainWindow", "机床实时信息", None))
+        self.machinetoolrealtime.setText(
+            _translate("MainWindow", "机床实时信息", None)
+        )
         self.productdesign.setText(_translate("MainWindow", "机床设计信息", None))
-        self.productline.setText(_translate("MainWNeuralnetworkVisual线工况", None))
+        self.productline.setText(
+            _translate("MainWNeuralnetworkVisual线工况", None)
+        )
         self.getMTstaticinfo.setText(_translate("MainWindow", "查询", None))
         self.updateMTstaticinfo.setText(_translate("MainWindow", "更新", None))
-

@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_productcraftinfo(object):
     def setupUi(self, productcraftinfo):
@@ -127,7 +133,9 @@ class Ui_productcraftinfo(object):
         productcraftinfo.setTabOrder(self.GONGXU, self.CHAXUN)
 
     def retranslateUi(self, productcraftinfo):
-        productcraftinfo.setWindowTitle(_translate("productcraftinfo", "Form", None))
+        productcraftinfo.setWindowTitle(
+            _translate("productcraftinfo", "Form", None)
+        )
         self.label.setText(_translate("productcraftinfo", "工艺ID", None))
         self.label_2.setText(_translate("productcraftinfo", "产品净重", None))
         self.label_3.setText(_translate("productcraftinfo", "零件图号", None))
@@ -138,4 +146,3 @@ class Ui_productcraftinfo(object):
         self.CHAXUN.setText(_translate("productcraftinfo", "查询", None))
         self.LURU.setText(_translate("productcraftinfo", "录入工序", None))
         self.GONGYILURU.setText(_translate("productcraftinfo", "录入工艺", None))
-

@@ -95,13 +95,17 @@ class BPNeuralNetwork:
         for h in range(self.hidden_n):
             for o in range(self.output_n):
                 change = output_deltas[o] * self.hidden_cells[h]
-                self.output_weights[h][o] += learn * change + correct * self.output_correction[h][o]
+                self.output_weights[h][o] += (
+                    learn * change + correct * self.output_correction[h][o]
+                )
                 self.output_correction[h][o] = change
         # update input weights
         for i in range(self.input_n):
             for h in range(self.hidden_n):
                 change = hidden_deltas[h] * self.input_cells[i]
-                self.input_weights[i][h] += learn * change + correct * self.input_correction[i][h]
+                self.input_weights[i][h] += (
+                    learn * change + correct * self.input_correction[i][h]
+                )
                 self.input_correction[i][h] = change
         # get global error
         error = 0.0
@@ -131,6 +135,6 @@ class BPNeuralNetwork:
             print(self.predict(case))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nn = BPNeuralNetwork()
     nn.test()

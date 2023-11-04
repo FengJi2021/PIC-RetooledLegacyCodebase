@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_Machinetoolrealtime(object):
     def setupUi(self, Machinetoolrealtime):
@@ -60,8 +66,11 @@ class Ui_Machinetoolrealtime(object):
         QtCore.QMetaObject.connectSlotsByName(Machinetoolrealtime)
 
     def retranslateUi(self, Machinetoolrealtime):
-        Machinetoolrealtime.setWindowTitle(_translate("Machinetoolrealtime", "Form", None))
+        Machinetoolrealtime.setWindowTitle(
+            _translate("Machinetoolrealtime", "Form", None)
+        )
         self.label.setText(_translate("Machinetoolrealtime", "机床序号", None))
         self.CHAXUN.setText(_translate("Machinetoolrealtime", "查询", None))
-        self.label_2.setText(_translate("Machinetoolrealtime", "机床三轴受力数据表", None))
-
+        self.label_2.setText(
+            _translate("Machinetoolrealtime", "机床三轴受力数据表", None)
+        )

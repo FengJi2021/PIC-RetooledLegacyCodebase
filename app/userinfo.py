@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -97,4 +103,3 @@ class Ui_Form(object):
         self.CHAXUN.setText(_translate("Form", "查询", None))
         self.GENGXIN.setText(_translate("Form", "更新", None))
         self.SHANCHU.setText(_translate("Form", "删除", None))
-
