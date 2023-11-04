@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_Design(object):
     def setupUi(self, Design):
@@ -58,4 +64,3 @@ class Ui_Design(object):
         self.label.setText(_translate("Design", "零件工艺和工序", None))
         self.TUPIAN.setText(_translate("Design", "图片显示", None))
         self.CHAXUN.setText(_translate("Design", "查询CAD", None))
-

@@ -12,16 +12,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_frmlogin(object):
     def setupUi(self, frmlogin):
@@ -55,4 +61,3 @@ class Ui_frmlogin(object):
         self.label.setText(_translate("frmlogin", "用户名：", None))
         self.label_2.setText(_translate("frmlogin", "密  码：", None))
         self.btExit.setText(_translate("frmlogin", "取消", None))
-

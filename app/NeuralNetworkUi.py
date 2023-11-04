@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_NeuralNetwork(object):
     def setupUi(self, NeuralNetwork):
@@ -69,10 +75,14 @@ class Ui_NeuralNetwork(object):
         self.XIANSHI_2.setObjectName(_fromUtf8("XIANSHI_2"))
         self.line = QtGui.QFrame(NeuralNetwork)
         self.line.setGeometry(QtCore.QRect(630, 120, 20, 521))
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.line.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.line.sizePolicy().hasHeightForWidth()
+        )
         self.line.setSizePolicy(sizePolicy)
         self.line.setFrameShape(QtGui.QFrame.VLine)
         self.line.setFrameShadow(QtGui.QFrame.Sunken)
@@ -87,4 +97,3 @@ class Ui_NeuralNetwork(object):
         self.label.setText(_translate("NeuralNetwork", "切削力数据表格", None))
         self.label_3.setText(_translate("NeuralNetwork", "神经网络学习结果", None))
         self.XIANSHI_2.setText(_translate("NeuralNetwork", "开始学习", None))
-

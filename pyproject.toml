@@ -19,4 +19,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 79
-preview = true
+# preview = true
+
+[tool.flake8]
+ignore = ['F403', 'F405']

@@ -11,16 +11,22 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_machinetoolupdate(object):
     def setupUi(self, machinetoolupdate):
@@ -135,11 +141,17 @@ class Ui_machinetoolupdate(object):
         QtCore.QMetaObject.connectSlotsByName(machinetoolupdate)
 
     def retranslateUi(self, machinetoolupdate):
-        machinetoolupdate.setWindowTitle(_translate("machinetoolupdate", "Machinetoolupdate", None))
+        machinetoolupdate.setWindowTitle(
+            _translate("machinetoolupdate", "Machinetoolupdate", None)
+        )
         self.label.setText(_translate("machinetoolupdate", "机床序号", None))
         self.label_2.setText(_translate("machinetoolupdate", "机床名称", None))
-        self.label_3.setText(_translate("machinetoolupdate", "机床最大功率（PW）", None))
-        self.label_4.setText(_translate("machinetoolupdate", "机床最大转速（r/min)", None))
+        self.label_3.setText(
+            _translate("machinetoolupdate", "机床最大功率（PW）", None)
+        )
+        self.label_4.setText(
+            _translate("machinetoolupdate", "机床最大转速（r/min)", None)
+        )
         self.label_5.setText(_translate("machinetoolupdate", "X范围", None))
         self.label_6.setText(_translate("machinetoolupdate", "Y范围", None))
         self.label_7.setText(_translate("machinetoolupdate", "Z范围", None))
@@ -151,4 +163,3 @@ class Ui_machinetoolupdate(object):
         self.label_13.setText(_translate("machinetoolupdate", "运行状况", None))
         self.label_14.setText(_translate("machinetoolupdate", "操作系统", None))
         self.gengxin.setText(_translate("machinetoolupdate", "更新", None))
-
