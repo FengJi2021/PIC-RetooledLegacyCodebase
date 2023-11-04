@@ -3,10 +3,11 @@ on:
   push:
     branches:
       - main
-      - enable_ga_for_build
+      - dev
   pull_request:
     branches:
       - main
+      - dev
 
 jobs:
   lint:
