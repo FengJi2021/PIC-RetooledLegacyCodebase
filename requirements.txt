@@ -5,7 +5,7 @@ packaging==23.2 ; python_full_version >= "3.9.0" and python_full_version < "3.11
 pefile==2023.2.7 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0" and sys_platform == "win32"
 pyinstaller-hooks-contrib==2023.10 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
 pyinstaller==6.1.0 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
-pyqt5-sip==12.13.0 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
+# pyqt5-sip==12.13.0 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
 pyqt5==5.15.0 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
 pywin32-ctypes==0.2.2 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0" and sys_platform == "win32"
 setuptools==68.2.2 ; python_full_version >= "3.9.0" and python_full_version < "3.11.0"
