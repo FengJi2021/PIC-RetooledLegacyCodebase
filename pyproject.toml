@@ -6,7 +6,8 @@ authors = ["FengJi2021 <feng.ji@campus.tu-berlin.de>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "~3.9"
+# python = "~3.9"
+python = ">=3.9.0,<3.11.0"
 pyqt5 = "5.15.0"
 pyinstaller = "6.1.0"
 
